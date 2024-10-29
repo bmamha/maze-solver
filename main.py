@@ -1,9 +1,8 @@
-from window import Window, Line, Point
+from graphics import Window
+from maze import Maze
 
 
 win = Window(800, 600)
-point1 = Point(100, 150)
-point2 = Point(300, 450)
-line = Line(point1, point2)
-win.draw_line(line, "red")
+maze = Maze(100, 200, 10, 10, 50, 50, win)
+maze._break_entrance_and_exit()
 win.wait_for_close()
